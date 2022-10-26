@@ -1,0 +1,37 @@
+
+@use "variables";
+@use "mixins";
+
+
+// FONDO OSCURO
+.modal__navbar{
+    &-back{
+        @include mixins.modal-back;
+    }
+
+    background-color: white;
+    width: 250px;
+    padding: 30px 25px;
+    height: 100%;
+    display: none;
+
+    &-items{
+        margin-top: 45px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        justify-content: space-between;
+    }
+
+    &-link{
+        text-decoration: none;
+        color: variables.$very-vark-blue;
+        font-size: 17px;
+        font-weight: 700;
+    }
+
+    &-cierre-icono:hover{
+        cursor: pointer;
+    }
+}

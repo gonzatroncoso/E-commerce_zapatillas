@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 20px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="contenedor__main">
+    <header class="header">
+
+      <div class="header__menu-icono">
+        <img class="header__menu" src="images/icon-menu.svg" alt="icono del menu">
+        <img class="header__logo" src="images/logo.svg" alt="logo">
+
+
+        <nav class="navbar">
+          <ul class="navbar__items">
+            <li> <a class="navbar-link" href="#">Colecciones</a> </li>
+            <li> <a class="navbar-link" href="#">Hombres</a> </li>
+            <li> <a class="navbar-link" href="#">Mujeres</a> </li>
+            <li> <a class="navbar-link" href="#">Sobre Nosotros</a> </li>
+            <li> <a class="navbar-link" href="#">Contacto</a> </li>
+          </ul>
+        </nav>
+
+      </div>
+        
+
+        <!-- navbar mobile -->
+
+        <div class="modal__navbar-back">
+          <nav class="modal__navbar">
+            <img class="modal__navbar-cierre-icono" src="images/icon-close.svg" alt="cerrar modal">
+            <ul class="modal__navbar-items">
+              <li> <a class="modal__navbar-link" href="#">Colecciones</a> </li>
+              <li> <a class="modal__navbar-link" href="#">Hombres</a> </li>
+              <li> <a class="modal__navbar-link" href="#">Mujeres</a> </li>
+              <li> <a class="modal__navbar-link" href="#">Sobre Nosotros</a> </li>
+              <li> <a class="modal__navbar-link" href="#">Contacto</a> </li>
+            </ul>
+          </nav>
+        </div>
+
+      <!-- ICONO CARRITO Y PERFIL -->
+        <div class="header__carta-avatar">
+          <div class="header__carta">
+            <div class="header__carta-notificacion">
+              5
+            </div>
+            <img src="images/icon-cart.svg" alt="icono carrito">
+          </div>
+
+          <img class="header__avatar" src="images/image-avatar.png" alt="foto de perfil">
+        </div>
+
+    </header>
+
+
+    <section class="contenedor">
+      <article class="imagenes">
+        <div class="imagenes__contenedor">
+          <img class="imagenes_anterior" src="images/icon-previous.svg" alt="icono anterior">
+          <img class="imagenes_posterior" src="images/icon-next.svg" alt="icono posterior">
+        </div>
+
+        <div class="imagenes__miniaturas">
+          <img id="1" class="imagenes__miniatura" src="images/image-product-1-thumbnail.jpg" alt="imagen zapatillas">
+          <img id="2" class="imagenes__miniatura" src="images/image-product-2-thumbnail.jpg" alt="imagen zapatillas">
+          <img id="3" class="imagenes__miniatura" src="images/image-product-3-thumbnail.jpg" alt="imagen zapatillas">
+          <img id="4" class="imagenes__miniatura" src="images/image-product-4-thumbnail.jpg" alt="imagen zapatillas">
+        </div>
+      </article>
+
+      <article class="detalles">
+        <h2 class="detalles__compania">Sneaker Company</h2>
+        <h2 class="detalles__titulo">  Fall Limited Edition Sneakers </h2>
+        <p class="detalles__descripcion">
+          These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, theyll withstand everything the weather can offer.
+        </p>
+
+        <div class="detalles__precios">
+          <p class="detalles__nuevo-precio">
+            $15.000  <span class="detalles__descuento">50%</span>
+          </p>
+
+          <p class="detalles__viejo-precio">
+            $30.000
+          </p>
+        </div>
+
+        <div class="detalles__producto-cantidad">
+          <div class="input">
+            <img class="input__restar" src="images/icon-minus.svg" alt="icono de restar">
+            <input class="input__numero" type="text" value="0">
+            <img class="input__sumar" src="images/icon-plus.svg" alt="icono de sumar">
+          </div>
+
+          <button class="detalles__boton">  <img src="images/icon-cart.svg" alt="icono del carrito"> Añadir al carrito</button>
+
+        </div>
+      </article>
+    </section>
+
+
+    <!-- carta modal para ver carrito -->
+    <div class="carta-modal">
+      <p class="carta-modal__titulo"> Cart </p>
+
+      <div class="carta-modal__confirmacion-contenedor">
+        <div class="carta-modal__detalles-contenedor">
+          <img src="images/image-product-1-thumbnail.jpg" alt="imagen 1 de zapatillas">
+          <div>
+            <p class="carta-modal__productos">Nike 97</p>
+            <p class="carta-modal__precio">$20.000 x3 <span>$60.000</span></p>
+          </div>
+          <img class="carta-modal__borrar" src="images/icon-delete.svg" alt="icono borrar">
+        </div>
+
+        <button class="carta-modal__borrar">Eliminar </button>
+      </div>
+    </div>
+
+
+    <!-- Galeria modal -->
+    <div class="modal-imagenes__back">
+
+      <article class="modal-imagenes">
+        <img class="modal-imagenes__cerrar" src="images/icon-close.svg" alt="icono cerrar">
+        <div class="modal-imagenes__contenedor">
+          <img class="modal-imagen_anterior" src="images/icon-previous.svg" alt="icono anterior">
+          <img class="modal-imagen_posterior" src="images/icon-next.svg" alt="icono posterior">
+        </div>
+        
+        <div class="modal-imagenes__miniaturas">
+          <img id="modal1" class="modal-imagenes__miniatura" src="images/image-product-1-thumbnail.jpg" alt="imagen zapatillas">
+          <img id="modal2" class="modal-imagenes__miniatura" src="images/image-product-2-thumbnail.jpg" alt="imagen zapatillas">
+          <img id="modal3" class="modal-imagenes__miniatura" src="images/image-product-3-thumbnail.jpg" alt="imagen zapatillas">
+          <img id="modal4" class="modal-imagenes__miniatura" src="images/image-product-4-thumbnail.jpg" alt="imagen zapatillas">
+        </div>
+      </article>
+    </div>
+      
+    </main>
+
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://gonzatroncoso.github.io/Portfolio/" target="_blank">Gonzalo Troncoso</a>
+  </footer>
+</body>
+</html>

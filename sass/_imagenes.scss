@@ -1,0 +1,32 @@
+
+@use "variables";
+@use "mixins";
+
+.imagenes{
+    &__contenedor{
+        background-image: url("images/image-product-1.jpg");
+        background-size: cover;
+        height: 300px;
+        width: 100%;
+
+        &:hover{
+            cursor: pointer;
+        }
+
+    }
+
+    &_anterior{
+        @include mixins.imagenes-boton(200px, 15px);
+    }
+
+    &_posterior{
+        @include mixins.imagenes-boton(200px, 320px);
+    }
+
+    &__miniaturas{
+        display: none;
+        @media (min-width:1110px){
+            display: block;
+        }
+    }
+}

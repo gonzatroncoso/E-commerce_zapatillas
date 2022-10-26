@@ -1,0 +1,49 @@
+
+@use "variables" as v;
+
+@mixin modal-back{
+    display: none;
+    background-color: v.$black-modal;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+
+@mixin imagenes-boton ($top, $left){
+        background-color: v.$white;
+        width: 40px;
+        height: 40px;
+        padding: 12px;
+        border-radius: 50%;
+        position: absolute;
+        top: $top;
+        left: $left;
+
+        &:hover{
+            cursor: pointer;
+        }
+}
+
+@mixin boton{
+    background-color: v.$orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: v.$white;
+    border: none;
+    padding: 5px;
+    height: 60px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 8px;
+    &:hover{
+        cursor: pointer;
+        opacity: 0.7;
+    }
+}

@@ -1,0 +1,61 @@
+@use "variables" as v;
+@use "mixins" ;
+
+.detalles{
+    padding: 25px;
+
+    &__compania{
+         color: v.$orange;
+         font-size: 13px;
+         letter-spacing: 1px;
+         margin-bottom: 12px;
+         text-transform: uppercase;
+    }
+
+    &__titulo{
+        font-size: 30px;
+        margin-bottom: 16px;
+    }
+
+    &__descripcion{
+        color: v.$dark-grayish-blue;
+        font-size: 15px;
+        line-height: 24px;
+        margin-bottom: 24px;
+    }
+
+    &__precios{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 24px;
+    }
+    &__nuevo-precio{
+        display: flex;
+        align-items: center;
+        font-size: 28px;
+        font-weight: 700;
+        gap: 18px;
+        
+    }
+    &__descuento{
+        background-color: v.$pale-orange;
+        color: v.$orange;
+        font-size: 15px;
+        padding: 4px;
+        border-radius: 5px;
+    }
+
+    &__viejo-precio{
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        color: v.$dark-grayish-blue;
+        text-decoration: line-through;
+    }    
+    
+    &__boton{
+        @include mixins.boton;
+    }
+    
+}

@@ -1,0 +1,82 @@
+
+@use "variables";
+
+.header{
+    // border: 1px solid red;
+    display: flex;
+    height: 70px;
+    padding: 0 15px;
+    align-items: center;
+    justify-content: space-between;
+    
+    @media (min-width: 1110px){
+        height: 115px;
+        border-bottom: 1px solid variables.$grayish-blue;
+    }
+
+    &__menu-icono{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 175px;
+        height: 100%;
+
+        @media (min-width: 1110px){
+            width: 640px;
+        }
+    }
+    // -----
+
+    &__menu:hover{
+        cursor: pointer;
+    }
+    &__menu{
+        @media (min-width: 1110px){
+            display: none;
+        }
+    }
+    // -----
+
+    &__carta{
+        position: relative;
+        &-notificacion{
+            background-color: variables.$orange;
+            height: 15px;
+            width: 15px;
+            color: variables.$white;
+            border-radius: 15px;
+            position: absolute;
+            top: -2px;
+            right: -5px;
+            font-size: 9px;
+            text-align: center;
+            display: none;
+        }
+        &:hover{
+            cursor: pointer;
+        }
+        // ------------------
+    }
+    &__carta-avatar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 70px;
+        @media (min-width: 1110px){
+            width: 130px;
+        }
+    }
+    &__avatar{
+        width: 25px;
+        @media (min-width: 1110px){
+            width: 50px;
+        }
+        &:hover{
+            cursor: pointer;
+            border: 1px solid variables.$orange;
+            border-radius: 50%;
+        }
+    }
+
+}
+
