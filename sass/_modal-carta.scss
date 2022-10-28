@@ -1,0 +1,51 @@
+@use "variables" as v;
+@use "mixins" ;
+
+
+
+.carta-modal{
+    display: none;
+    width: 360px;
+    height: 260px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 10px;
+    position: absolute;
+    right: 6px;
+    top: 75px;
+    background-color: v.$white;
+
+    &__titulo{
+        padding: 25px;
+        border-bottom: 1px solid v.$grayish-blue ;
+        font-weight: 700;
+    }
+
+    &__detalles-contenedor{
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+        justify-content: space-between;
+        color: v.$dark-grayish-blue;
+    }
+
+    &__imagen{
+        width: 60px;
+        border-radius: 5px;
+    }
+
+    &__confirmacion-contenedor{
+        padding: 20px;
+    }
+
+    &__precio span{
+        font-weight: 700;
+        color: black;
+    }
+    &__borrar:hover{
+        cursor: pointer;
+    }
+    &__eliminar{
+        @include mixins.boton;
+    }
+
+}

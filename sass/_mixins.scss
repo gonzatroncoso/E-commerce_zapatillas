@@ -2,7 +2,7 @@
 @use "variables" as v;
 
 @mixin modal-back{
-    display: none;
+    // display: none;
     background-color: v.$black-modal;
     position: absolute;
     height: 100%;
@@ -13,7 +13,7 @@
 }
 
 
-@mixin imagenes-boton ($top, $left){
+@mixin imagenes-boton ($top, $left, $oculto ){
         background-color: v.$white;
         width: 40px;
         height: 40px;
@@ -25,6 +25,15 @@
 
         &:hover{
             cursor: pointer;
+        }
+
+        @media (min-width:1110px){
+            @if ($oculto == true){
+                display: block;
+            }@else{
+                display: none;
+            }
+            
         }
 }
 

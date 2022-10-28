@@ -6,6 +6,7 @@
     height: 60px;
     display: flex;
     justify-content: space-between;
+    background-color: v.$light-grayish-blue;
 
     &__restar{
         width: 25px;
@@ -19,16 +20,15 @@
         height: 100%;
         padding: 22px 5px;
         cursor: pointer;
-        
     }
 
     &__numero{
         width: 100%;
         text-align: center;
         border: none;
-        background-color: v.$light-grayish-blue;
         font-size: 20px;
         font-weight: 700;
         outline: none;
+        background-color: v.$light-grayish-blue;
     }
 }

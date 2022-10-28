@@ -1,5 +1,5 @@
 
-@use "variables";
+@use "variables" as v;
 @use "mixins";
 
 .imagenes{
@@ -8,7 +8,7 @@
         background-size: cover;
         height: 300px;
         width: 100%;
-
+        
         &:hover{
             cursor: pointer;
         }
@@ -16,17 +16,40 @@
     }
 
     &_anterior{
-        @include mixins.imagenes-boton(200px, 15px);
+        @include mixins.imagenes-boton(200px, 15px, false);
     }
 
     &_posterior{
-        @include mixins.imagenes-boton(200px, 320px);
+        @include mixins.imagenes-boton(200px, 320px, false);
     }
 
     &__miniaturas{
+        
         display: none;
         @media (min-width:1110px){
-            display: block;
+            display: flex;
+            justify-content: space-between;
         }
+    }
+
+    &__miniatura{
+        width: 90px;
+        border-radius: 16px;
+        &:hover{
+            cursor: pointer;
+            border: 2px solid v.$orange;
+        }
+    }
+
+    @media (min-width: 1110px){
+            width: 450px;
+        &__contenedor{
+            border-radius: 16px;
+            height: 445px;
+            margin-bottom: 30px;
+            background-position-y: 0;
+        }
+
+
     }
 }

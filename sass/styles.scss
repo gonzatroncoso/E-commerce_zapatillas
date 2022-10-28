@@ -7,6 +7,8 @@
 @use "imagenes" ;
 @use "detalles" ;
 @use "input" ;
+@use "modal-carta";
+@use "modal-imagenes";
 
 .contenedor__main{
     position: relative;
@@ -17,5 +19,13 @@
     @media (min-width: 1110px){
         
         width: 1110px;
+    }
+}
+
+.contenedor{
+    @media (min-width:1110px){
+        display: flex;
+        padding: 90px 50px;
+        gap: 125px;
     }
 }

@@ -1,0 +1,44 @@
+@use "variables" as v;
+@use "mixins";
+
+.modal-imagenes{
+    border: 5px solid red;
+    width: 450px;
+    &__back{
+        @include mixins.modal-back 
+    }
+
+    &__contenedor{
+        background-image: url("/images/image-product-1.jpg");
+        background-size: cover;
+        height: 450px;
+        margin-bottom: 30px;
+        border-radius: 15px;
+    }
+    &__miniaturas{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    &__miniatura{
+        width: 90px;
+        border-radius: 16px;
+        &:hover{
+            cursor: pointer;
+            border: 2px solid v.$orange;
+        }
+    }
+
+    // &_anterior{
+    //     @include mixins.imagenes-boton(0px, 0px, true)
+
+        
+    // }
+}
+
+.modal-imagen_anterior{
+    @include mixins.imagenes-boton(1900px, -15px, true)
+
+}
+

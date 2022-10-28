@@ -119,7 +119,6 @@ body {
   display: none;
 }
 .modal__navbar-back {
-  display: none;
   background-color: hsla(0deg, 0%, 0%, 0.5);
   position: absolute;
   height: 100%;
@@ -168,6 +167,11 @@ body {
 .imagenes_anterior:hover {
   cursor: pointer;
 }
+@media (min-width: 1110px) {
+  .imagenes_anterior {
+    display: none;
+  }
+}
 .imagenes_posterior {
   background-color: hsl(0deg, 0%, 100%);
   width: 40px;
@@ -181,12 +185,37 @@ body {
 .imagenes_posterior:hover {
   cursor: pointer;
 }
+@media (min-width: 1110px) {
+  .imagenes_posterior {
+    display: none;
+  }
+}
 .imagenes__miniaturas {
   display: none;
 }
 @media (min-width: 1110px) {
   .imagenes__miniaturas {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.imagenes__miniatura {
+  width: 90px;
+  border-radius: 16px;
+}
+.imagenes__miniatura:hover {
+  cursor: pointer;
+  border: 2px solid hsl(26deg, 100%, 55%);
+}
+@media (min-width: 1110px) {
+  .imagenes {
+    width: 450px;
+  }
+  .imagenes__contenedor {
+    border-radius: 16px;
+    height: 445px;
+    margin-bottom: 30px;
+    background-position-y: 0;
   }
 }
 
@@ -256,11 +285,34 @@ body {
   cursor: pointer;
   opacity: 0.7;
 }
+@media (min-width: 1110px) {
+  .detalles {
+    padding-top: 60px;
+    width: 445px;
+  }
+  .detalles__titulo {
+    font-size: 50px;
+    margin-bottom: 50px;
+  }
+  .detalles__descripcion {
+    font-size: 16px;
+    margin-bottom: 35px;
+  }
+  .detalles__precios {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .detalles__producto-cantidad {
+    display: flex;
+    gap: 30px;
+  }
+}
 
 .input {
   height: 60px;
   display: flex;
   justify-content: space-between;
+  background-color: hsl(223deg, 64%, 98%);
 }
 .input__restar {
   width: 25px;
@@ -278,10 +330,119 @@ body {
   width: 100%;
   text-align: center;
   border: none;
-  background-color: hsl(223deg, 64%, 98%);
   font-size: 20px;
   font-weight: 700;
   outline: none;
+  background-color: hsl(223deg, 64%, 98%);
+}
+
+.carta-modal {
+  display: none;
+  width: 360px;
+  height: 260px;
+  border-radius: 8px;
+  box-shadow: 3px 3px 10px;
+  position: absolute;
+  right: 6px;
+  top: 75px;
+  background-color: hsl(0deg, 0%, 100%);
+}
+.carta-modal__titulo {
+  padding: 25px;
+  border-bottom: 1px solid hsl(220deg, 14%, 75%);
+  font-weight: 700;
+}
+.carta-modal__detalles-contenedor {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  justify-content: space-between;
+  color: hsl(219deg, 9%, 45%);
+}
+.carta-modal__imagen {
+  width: 60px;
+  border-radius: 5px;
+}
+.carta-modal__confirmacion-contenedor {
+  padding: 20px;
+}
+.carta-modal__precio span {
+  font-weight: 700;
+  color: black;
+}
+.carta-modal__borrar:hover {
+  cursor: pointer;
+}
+.carta-modal__eliminar {
+  background-color: hsl(26deg, 100%, 55%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: hsl(0deg, 0%, 100%);
+  border: none;
+  padding: 5px;
+  height: 60px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 8px;
+}
+.carta-modal__eliminar:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.modal-imagenes {
+  border: 5px solid red;
+  width: 450px;
+}
+.modal-imagenes__back {
+  background-color: hsla(0deg, 0%, 0%, 0.5);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.modal-imagenes__contenedor {
+  background-image: url("/images/image-product-1.jpg");
+  background-size: cover;
+  height: 450px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+}
+.modal-imagenes__miniaturas {
+  display: flex;
+  justify-content: space-between;
+}
+.modal-imagenes__miniatura {
+  width: 90px;
+  border-radius: 16px;
+}
+.modal-imagenes__miniatura:hover {
+  cursor: pointer;
+  border: 2px solid hsl(26deg, 100%, 55%);
+}
+
+.modal-imagen_anterior {
+  background-color: hsl(0deg, 0%, 100%);
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: 1900px;
+  left: -15px;
+}
+.modal-imagen_anterior:hover {
+  cursor: pointer;
+}
+@media (min-width: 1110px) {
+  .modal-imagen_anterior {
+    display: block;
+  }
 }
 
 .contenedor__main {
@@ -293,6 +454,14 @@ body {
 @media (min-width: 1110px) {
   .contenedor__main {
     width: 1110px;
+  }
+}
+
+@media (min-width: 1110px) {
+  .contenedor {
+    display: flex;
+    padding: 90px 50px;
+    gap: 125px;
   }
 }
 
