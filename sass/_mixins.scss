@@ -2,14 +2,15 @@
 @use "variables" as v;
 
 @mixin modal-back{
-    // display: none;
+    display: none;
     background-color: v.$black-modal;
     position: absolute;
-    height: 100%;
+    height: 126%;
     width: 100%;
     left: 0;
     top: 0;
     z-index: 1;
+    
 }
 
 

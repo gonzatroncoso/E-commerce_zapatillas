@@ -2,10 +2,12 @@
 @use "mixins";
 
 .modal-imagenes{
-    border: 5px solid red;
-    width: 450px;
+    width: 600px;
     &__back{
-        @include mixins.modal-back 
+        @include mixins.modal-back; 
+        display: none;
+        // display: grid;
+        place-content: center;
     }
 
     &__contenedor{
@@ -14,11 +16,14 @@
         height: 450px;
         margin-bottom: 30px;
         border-radius: 15px;
+        position: relative;
     }
+
     &__miniaturas{
         display: flex;
         justify-content: space-between;
-        
+        width: 500px;
+        margin: auto;    
     }
 
     &__miniatura{
@@ -30,15 +35,26 @@
         }
     }
 
-    // &_anterior{
-    //     @include mixins.imagenes-boton(0px, 0px, true)
+    &__cerrar-contenedor{
+        height: 30px;
+        text-align: right;
+    }
 
-        
-    // }
+    // icono para cerrar modal de las imagenes
+    &__cerrar{
+        width: 15px;
+        &:hover{
+            cursor: pointer;
+            
+        }
+    }
 }
 
 .modal-imagen_anterior{
-    @include mixins.imagenes-boton(1900px, -15px, true)
+    @include mixins.imagenes-boton(220px, 5px, true)
+}
 
+.modal-imagen_posterior{
+    @include mixins.imagenes-boton(220px, 555px, true)
 }
 
